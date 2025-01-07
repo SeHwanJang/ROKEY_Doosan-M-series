@@ -93,7 +93,7 @@ def main(args=None):
         task_compliance_ctrl()
         set_desired_force([0,0,-15,0,0,0], [0,0,1,0,0,0], mod = DR_FC_MOD_REL)
         
-        # 바닥에 닿을 때까지 아래로
+        # Z축 외력 기준 초과 확인
         while not check_force_condition(DR_AXIS_Z, max = 10):
             pass
 
